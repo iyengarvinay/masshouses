@@ -77,6 +77,8 @@
 
 <img src="datahead.png" alt="head">
 
+<p> The appraised value is highly varied and spread out, the mean appraised value is $580,000 and the standard deviation is $481,000. The median is $430,000, which implies the data is right skewed. </p>
+
 <h3><a id="distlatlong" class="anchor" href="#cs109-class-project-motivation" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Latitude and Longitude</h3>
 
@@ -120,7 +122,7 @@
 <p>Below is a table indicating the prediction accuracy of the various models we built along the way. </p>
  <img src="table.jpg" alt="Results">
  
- <p>As this table indicates, our process went from a baseline model with an R2 of 0.18 to a more sophisticated tuned ridge regression model with an R2 of 0.46, to ultimately a tuned lasso model with an R2 of 0.48. Along the way, we tried out every model learned in the class, most of which did not work on our data or produced worse results. Our final model also had an average residual of $187,500, which is comparable to the best models in literature. </p>
+ <p>As this table indicates, our process went from a baseline model with an R2 of 0.18 to a more sophisticated tuned ridge regression model with an R2 of 0.46, to ultimately a tuned lasso model with an R2 of 0.48. Along the way, we tried out every model learned in the class, most of which did not work on our data or produced worse results. Our final model also had an average residual of $187,500, which is comparable to the best models in literature. In our initial model, we had multiple features, namely gross area and land square footage. However, these variables correlated significantly with living space (very positive linear relationship) and as a result we removed them from our dataset. The 5 final features we ended up using were: living space, number of bedrooms, number of bathrooms, latitude, longitude, and distance from the city center. </p>
 
 <h2><a id="summary" class="anchor" href="#cs109-class-project-prediction" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Conclusion</h2>
