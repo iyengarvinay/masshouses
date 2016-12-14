@@ -58,7 +58,7 @@
 <a id="cs109-class-project-objectives" class="anchor" href="#cs109-class-project-objectives" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Objectives</h3>
 
-<p>Through this project, we sought to answer three primary objectives:</p>
+<p>Through this project, we sought to answer three primary questions:</p>
 <ul>
   <li>Which features of a home are linked to the intrinsic value of a home? </li>
   <li>Can we integrate those features into a predictive algorithm that would predict the intrinsic value of a property</li>
@@ -69,15 +69,7 @@
 <a id="cs109-class-project-approach" class="anchor" href="#cs109-class-project-objectives" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Approach</h3>
 
-<p>We began our study by scraping relevant datasets from the Hubway website as well as websites detailing weather and 
-sports event histories for Boston during 2012. We then performed a series of exploratory analyses with the
-hope of understanding how different variables were associated with one another. These explorations revealed important
-patterns about Hubway ridership on weekdays vs. weekends, in good weather vs. bad weather, and before and after 
-baseball games. We also incorporated mapping and clustering operations into our exploratory phase: we used simple 
-techniques to identify how location affects station ridership and more complicated techniques such as singular value 
-decomposition to group stations according to temporal use patterns and map them geographically. The information 
-collected during the exploration phase informed the creation of three predictive algorithms: one using random forest
-classification, another using Bayesian inference, and third using multiple regression.</p>
+<p>We began our study by scraping a dataset from the City of Boston Assessing Department which is responsible for providing the current value and tax status of properties in the Boston area. The dataset included 169,199 properties and had 77 features. Some features were land and living square footage, number of rooms (bedrooms and bathrooms), building style, year built, and year of latest remodel. We cleaned the data by removing properties with appraisal prices of zero dollars, removed outliers that were likewise illogical (e.g. the year built is 0), and performed one-hot encoding to convert qualitative. Then, we performed several exploratory analyses with the goal of understanding how different variables were associated with one another. The information collected during the data exploration was used to inform the construction of the three predictive models: one using linear regression, one using lasso, and using ridge. </p>
 
 <h2><a id="analysis" class="anchor" href="#cs109-class-project-analysis" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Analysis</h2>
@@ -159,7 +151,7 @@ they can do is check to see whether a station is currently empty or full and the
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Repository maintained by <a href="https://github.com/CS109Hubway">CS109Hubway</a></p>
+        <p class="copyright">Repository maintained by <a href="https://github.com/CS109Hubway">CS109RealEstatePrivateEquity</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
