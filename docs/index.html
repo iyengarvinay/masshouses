@@ -128,20 +128,13 @@ games. Go Sox!</p>
 <h2><a id="prediction" class="anchor" href="#cs109-class-project-prediction" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Prediction</h2>
 
-<p>Right now, Hubway users can’t really predict whether a station will be empty or full in thirty minutes. The best 
-they can do is check to see whether a station is currently empty or full and then assume that it will look the same in
- the near future. We set out to change that by constructing truly predictive models. To assess the accuracy of our 
- models, we had to first construct a “baseline” to compare our results against. The first chart below shows the 
- prediction accuracy of the baseline model. This model simulates the best possible results possible using real time 
- data. </p>
+<p>Below is a table indicating the prediction accuracy of the various models we built along the way. </p>
  <img src="table.jpg" alt="Results">
  
- <p>Our predictive models take weather and events into account and use more advanced data science techniques such 
- as bayesian inference, random forest classification, and regression analysis. The plots below shows the 
- results of our predictive models compared against the baseline model. Accuracy here is gauged in terms of “recall,” 
- which asks, “Of all the stations that ended up being empty or full, how many did the model identify correctly?"</p>
- <img src="images/EmptyRecall.png" alt="empty">
- <img src="images/FullRecall.png" alt="full">
+ <p>As this table indicates, our process went from a baseline model with an R2 of 0.18 to a more sophisticated tuned ridge regression model with an R2 of 0.46, to ultimately a tuned lasso model with an R2 of 0.48. Along the way, we tried out every model learned in the class, most of which did not work on our data or produced worse results. Our final model also had an average residual of $187,500, which is comparable to the best models in literature. </p>
+
+  <p>In conclusion, we were able to build a new model for real estate private equity valuation that proves to be much more efficient and just as accurate as the best models used in industry and literature today. This is a promising first step in the new age of using machine learning and computational tools to make financial analyis better.</p>
+
       </section>
     </div>
 
