@@ -67,7 +67,7 @@
 <a id="cs109-class-project-approach" class="anchor" href="#cs109-class-project-objectives" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Approach</h3>
 
-<p>We began our study by scraping a dataset from the City of Boston Assessing Department which is responsible for providing the current value and tax status of properties in the Boston area. The dataset included 169,199 properties and had 77 features. Some features were land and living square footage, number of rooms (bedrooms and bathrooms), building style, year built, and year of latest remodel. We cleaned the data by removing properties with appraisal prices of zero dollars, removed outliers that were likewise illogical (e.g. the year built is 0), and performed one-hot encoding to convert qualitative. Then, we performed several exploratory analyses with the goal of understanding how different variables were associated with one another. The information collected during the data exploration was used to inform the construction of the three predictive models: one using linear regression, one using lasso, and using ridge. </p>
+<p>We began our study by scraping a dataset from the City of Boston Assessing Department which is responsible for providing the current value and tax status of properties in the Boston area. The dataset included 169,199 properties and had 77 features. Some features were land and living square footage, number of rooms (bedrooms and bathrooms), building style, year built, and year of latest remodel. We cleaned the data by removing properties with appraisal prices of zero dollars, removed outliers that were likewise illogical (e.g. the year built is 0), and performed one-hot encoding to convert qualitative into quantitative data. Then, we performed several exploratory analyses with the goal of understanding how different variables were associated with one another. The information collected during the data exploration was used to inform the construction of the three predictive models: one using linear regression, one using lasso, and using ridge. </p>
 
 <h2><a id="analysis" class="anchor" href="#cs109-class-project-analysis" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Analysis</h2>
@@ -77,7 +77,7 @@
 
 <img src="datahead.png" alt="head">
 
-<p> The appraised value is highly varied and spread out, the mean appraised value is $580,000 and the standard deviation is $481,000. The median is $430,000, which implies the data is right skewed. </p>
+<p> This table shows a summary of several key variables we incorporated into our model. The appraised value is highly varied and spread out, the mean appraised value is $580,000 and the standard deviation is $481,000. The median is $430,000, which implies the data is right skewed. </p>
 
 <h3><a id="distlatlong" class="anchor" href="#cs109-class-project-motivation" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Latitude and Longitude</h3>
@@ -97,7 +97,7 @@
 
 <img src="distance.png" alt="distance">
 
-<p>This graph reveals how the distance the property is from the city center correlates with price. As expected, there are a large number very expensive properties located right in the center of Boston, close to areas such as the financial district. As we go even 2 miles out from the city center to more suburban areas, prices drop substantially. The slight bump in prices at around 4 miles from the city center refers to suburbs such as Cambridge and Brookline which are generally more expensive places to live.
+<p>This graph reveals how the distance the property is from the city center correlates with price. As expected, there are a large number of very expensive properties located right in the center of Boston, close to areas such as the financial district. As we go even 2 miles out from the city center to more suburban areas, prices drop substantially. The slight bump in prices at around 4 miles from the city center refers to suburbs such as Cambridge and Brookline which are generally more expensive places to live.
 </p>
 
 
@@ -114,13 +114,13 @@
 
 <img src="space.png" alt="space">
 
-<p> Property value is linearly related to the amount of living space available as evidences by the relatively straight, positive scatter plot. This makes sense since the value of the home should increase as it gets bigger. </p>
+<p> Property value is linearly related to the amount of living space available as evidenced by the relatively straight, positive scatter plot. This makes sense since the value of the home should increase as it gets bigger. </p>
 
 <h2><a id="prediction" class="anchor" href="#cs109-class-project-prediction" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>Prediction</h2>
 
 <p>Below is a table indicating the prediction accuracy of the various models we built along the way. </p>
- <img src="table.jpg" alt="Results">
+ <img src="table.png" alt="Results">
  
  <p>As this table indicates, our process went from a baseline model with an R2 of 0.18 to a more sophisticated tuned ridge regression model with an R2 of 0.46, to ultimately a tuned lasso model with an R2 of 0.48. Along the way, we tried out every model learned in the class, most of which did not work on our data or produced worse results. Our final model also had an average residual of $187,500, which is comparable to the best models in literature. In our initial model, we had multiple features, namely gross area and land square footage. However, these variables correlated significantly with living space (very positive linear relationship) and as a result we removed them from our dataset. The 5 final features we ended up using were: living space, number of bedrooms, number of bathrooms, latitude, longitude, and distance from the city center. </p>
 
